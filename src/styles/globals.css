@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: rgb(191 175 128);
+  --bg-color: rgba(1, 37, 160, 0.6);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in { 
+  animation: fadeIn 1s ease-in-out; 
+}
+
+@keyframes zoom {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.zoom-animation {
+  animation: zoom 5s infinite ease-in-out;
+}
+
+/* Pour les cartes de candidates */
+.card {
+  @apply bg-gray-900 rounded-lg overflow-hidden shadow-lg;
+}
+
+/* Pour les boutons */
+.btn-primary {
+  @apply bg-gold text-black font-medium py-2 px-4 rounded-md hover:bg-opacity-90 transition-colors;
+}
